@@ -15,7 +15,7 @@
     You should have received a copy of the GNU General Public License
     along with this program; if not, see <http://www.gnu.org/licenses/>.
 
-    Client example:
+    Bare client example:
         address = ('', 23000)
         omxSocket = socket.socket( socket.AF_INET, socket.SOCK_DGRAM )
         omxSocket.connect(address)
@@ -26,6 +26,8 @@
         if playing[0:4] == 'True':
            omxSocket.send('stop')
         omxSocket.close()
+
+    Better yet, use the included client
      
 """
 
