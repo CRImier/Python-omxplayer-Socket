@@ -14,7 +14,7 @@ To use the client interactively, use "python -i omxClient.py", where -i would dr
 * halt - closes the omxplayer instance and shuts down the server
 * kill - forcibly exits the omxplayer instance
 * status - returns "Playing /path/to/file" while omxplayer is running and "Stopped None" when it's not.
-* custom_cmd - Send a custom keystroke 
+* custom_cmd keystroke - Send a custom keystroke 
 * forward_bit - Forward 600s
 * forward_lot - Forward 30s
 * backward_bit - Backward 600s
