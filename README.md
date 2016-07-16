@@ -7,8 +7,34 @@ To use the server, run it as "python omxServer.py". Theoretically, it should wor
 
 To use the client interactively, use "python -i omxClient.py", where -i would drop you into the console with the "client" object already initialized and connected. You'll get status responses printed back.
 
+#### Commands:
+* play /path/to/file [audio=hdmi] - starts the omxplayer instance with given path 
+* pause - toggles pause
+* stop - stops the omxplayer instance
+* halt - closes the omxplayer instance and shuts down the server
+* kill - forcibly exits the omxplayer instance
+* status - returns "Playing /path/to/file" while omxplayer is running and "Stopped None" when it's not.
+* custom_cmd - Send a custom keystroke 
+* forward_bit - Forward 600s
+* forward_lot - Forward 30s
+* backward_bit - Backward 600s
+* backward_lot - Backward 30s 
+* toggle_subs
+* show_subs
+* hide_subs
+* next_subs
+* prev_subs
+* volume_up
+* volume_down
+* next_audio
+* prev_audio
+* next_chapter
+* prev_chapter
+* increase_speed
+
 ### TODO:
-* as for now, list of commands is available by looking through server code, needs to be exported somewhere
-* remake it to use subprocess.Popen.
+* remake it to use subprocess.Popen
 * enable debug logging
 * enable omxplayer output parsing for error and status messages
+
+
