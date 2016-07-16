@@ -64,8 +64,7 @@ simple_commands = {
 "next_chapter":"o",
 "prev_chapter":"i",
 "increase_speed":"1",
-"pause":"p",
-"info":"z"}
+"pause":"p"}
 
 quit_command = "q"
 
