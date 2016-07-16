@@ -1,17 +1,14 @@
 Python-omxplayer-Socket
 =======================
 
-Socket Interface for omxplayer using Python.
+Socket Interface for omxplayer using Python. Written by @stifi, heavily refactored by @CRImier.
 
-Example Client usage:
+To use the server, run it as "python omxServer.py". Theoretically, it should work, in practice you might need launch it in a certain way or fix permissions so that the omxplayer can run.
 
-    address = ('', 23000)
-    omxSocket = socket.socket( socket.AF_INET, socket.SOCK_DGRAM )
-    omxSocket.connect(address)
-    omxSocket.send('play /path/to/movie/movie.mkv omxsound=hdmi')
-    omxSocket.send('forward_bit')
-    omxSocket.send('status')
-    playing = omxSocket.recv(1024)
-    if playing[0:4] == 'True':
-       omxSocket.send('stop')
-    omxSocket.close()
+To use the client interactively, use "python -i omxClient.py", where -i would drop you into the console with the "client" object already initialized and connected. You'll get status responses printed back.
+
+### TODO:
+* as for now, list of commands is available by looking through server code, needs to be exported somewhere
+* remake it to use subprocess.Popen.
+* enable debug logging
+* enable omxplayer output parsing for error and status messages
