@@ -147,7 +147,7 @@ class omxPlayerServer():
             return False #Nothing to play specified
         if " sound=" in data: #Ugly? Yes. Unlikely to break anything? Yes.
             data, sound = data.rsplit(' ', 1)
-            sound = sound[len("sound:"):]
+            sound = sound[len("sound="):]
         else:
             sound = self.default_sound
         self.playUrl = data
