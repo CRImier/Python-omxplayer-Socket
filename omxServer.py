@@ -89,8 +89,10 @@ class omxPlayerServer():
     omxProcess = None
     omxSocket = None
     current_client = None
+    stop_flag = False
 
     default_sound = "hdmi"
+ 
 
     def __init__(self, address = ('', 23000)):
         self.omxSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -103,8 +105,9 @@ class omxPlayerServer():
             sys.exit(1)
 
     def startServer(self):
+        self.stop_flag = False
         try:
-            while True:
+            while not self.stop_flag:
                 self.receive_message()
         except KeyboardInterrupt:
             self.omxSocket.close()
@@ -159,6 +162,7 @@ class omxPlayerServer():
         if self.omxProcess.isalive():
             self.omxProcess.wait()
         self.omxSocket.close()
+        self.stop_flag = True
 
     @error_wrapper
     def kill(self, *args):
