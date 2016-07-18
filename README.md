@@ -1,7 +1,11 @@
 omxSocket
 =======================
 
-Socket Interface for omxplayer using Python. Written by @stifi, heavily refactored by @CRImier.
+Socket Interface for omxplayer using Python. Written by @stifi, heavily refactored by @CRImier. 
+
+Installation:
+
+pip install omxSocket
 
 To use the server, run  "python -m omxSocket.omxServer". Theoretically, it should work, in practice you might need launch it in a certain way or fix permissions so that the omxplayer can run.
 
