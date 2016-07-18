@@ -27,9 +27,9 @@ if __name__ == "__main__":
     print("client.command('play /path/to/movie/movie.mkv omxsound=hdmi')")
     print("client.command('forward_bit')")
     print("""response = client.command('status')
-    if response.startswith('Playing'):
-        omxSocket.send('stop')""")
+if response.startswith('Playing'):
+    client.command('stop')""")
     print("In the end, use:")
-    print("omxClient.shutdown()")
+    print("client.shutdown()")
 
 
