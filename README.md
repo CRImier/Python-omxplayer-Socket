@@ -1,11 +1,11 @@
-Python-omxplayer-Socket
+omxSocket
 =======================
 
 Socket Interface for omxplayer using Python. Written by @stifi, heavily refactored by @CRImier.
 
-To use the server, run it as "python omxServer.py". Theoretically, it should work, in practice you might need launch it in a certain way or fix permissions so that the omxplayer can run.
+To use the server, run  "python -m omxSocket.omxServer". Theoretically, it should work, in practice you might need launch it in a certain way or fix permissions so that the omxplayer can run.
 
-To use the client interactively, use "python -i omxClient.py", where -i would drop you into the console with the "client" object already initialized and connected. You'll get status responses printed back.
+To use the client interactively, use "python -i -m omxSocket.omxClient.py", where -i would drop you into the console with the "client" object already initialized and connected. You'll get status responses printed back.
 
 #### Commands:
 * play /path/to/file [audio=hdmi] - starts the omxplayer instance with given path 
@@ -36,5 +36,3 @@ To use the client interactively, use "python -i omxClient.py", where -i would dr
 * remake it to use subprocess.Popen
 * enable debug logging
 * enable omxplayer output parsing for error and status messages
-
-
